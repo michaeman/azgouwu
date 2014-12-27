@@ -1,2 +1,78 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="headline">
+<div class="container">
+<h1>Get luxury furnitures from China at an affordable price</h1>
+</div>
+</div>
+
+<div class="china-tour gap-space">
+<div class="container">
+<div class="row">
+<div class="col-sm-6">
+<h2>China Buying Tour</h2>
+<p>You focus on your house design. We deliver you the best buying experience with full-time tour guide provided.</p>
+</div>
+<div class="col-sm-4 col-sm-offset-1">
+<%= image_tag('china-market-ps.jpg', class: "img-rounded img-responsive") %>
+</div>
+</div>
+</div>
+</div>
+
+<div class="manufacture gap-space">
+<div class="container">
+<div class="row">
+<div class="col-sm-6">
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="4000">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <% active_marked = 0 %>
+    <% Dir.glob("app/assets/images/furnitures/*").each do |item| %>
+      <% item.slice!('app/assets/images/') %>
+      <% if active_marked == 0 %>
+        <div class= 'item active' >
+      <% else %>
+        <div class= 'item' >
+      <% end %>
+        <%= image_tag(item, class: "img-responsive" ) %>
+        <% active_marked = 1 %>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>
+<div class="col-sm-4 col-sm-offset-1">
+<h2>Buy From Our Credited Manufacturers</h2>
+<p>Without going anywhere else, pick quality furnitures from our range of credited manufacturers.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="shipping gap-space">
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-6">
+    <h2>Hassles On Us</h2>
+    <p>Tell us the furniture you want from anywhere in China, we will handle the rest.</p>
+  </div>
+  <div class="col-sm-4 col-sm-offset-1">
+    <%= image_tag('shipping.png', class: "img-rounded img-responsive") %>
+  </div>
+  </div>
+</div>
+</div>
+
+<footer class="footer">
+<div class="container">
+    <%= link_to('Contact Us') %>
+</div>
+</footer>
+
+
