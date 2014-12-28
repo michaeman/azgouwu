@@ -15,12 +15,33 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+$siteColor : #12232B;
+$siteColorLight: #3F7792;
+$inactiveLink: #777;
+
 html, body {
   height: 100%;
 }
 
 .navbar {
   margin-bottom: 0px;
-  background-color: #12232B;
+  background-color: $siteColor;
   border-radius: 0px !important;
+
+  .dropdown-menu {
+    background-color: $siteColor;
+    li a {
+      color: $inactiveLink;
+    } 
+  }
+}
+
+.footer {
+  background-color: $siteColor;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  a {
+    color: white;
+  }
 }

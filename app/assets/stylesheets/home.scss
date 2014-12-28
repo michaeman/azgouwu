@@ -44,14 +44,7 @@ $panelColor: #F0F0F0;
   }
 }
 
-.footer {
-  background-color: $siteColor;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  a {
-    color: white;
-  }
-}
+
 
 // for tablet devices and larger
 @media (min-width: 768px) { 
