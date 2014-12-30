@@ -5,7 +5,10 @@ $siteColor : #12232B;
 $panelColor: #F0F0F0;
 
 .headline {
-  background-image: image-url('home-effect.jpg');
+  // background-image: image-url('home-effect.jpg');
+  div {
+    height: 100%;
+  }
   box-sizing: border-box;
   height: 75%;
   color: white;

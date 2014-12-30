@@ -1,6 +1,8 @@
 <div class="headline">
+<div data-bg-src="http://hexinpeter.com/images/home-effect.jpg">
 <div class="container">
 <h1>Get luxury furnitures from China at an affordable price</h1>
+</div>
 </div>
 </div>
 
@@ -63,7 +65,9 @@
     <p>Tell us the furniture you want from anywhere in China, we will handle the rest.</p>
   </div>
   <div class="col-sm-4 col-sm-offset-1">
-    <%= image_tag('shipping.png', class: "img-rounded img-responsive") %>
+    <%#= image_tag(data: {src: 'http://hexinpeter.com/images/shipping.png'}, class: "img-rounded img-responsive") %>
+    <%#= image_tag('shipping.png', class: "img-rounded img-responsive") %>
+    <img data-src="http://hexinpeter.com/images/shipping.png" alt="My responsive image" class="img-rounded img-responsive"/>
   </div>
   </div>
 </div>
