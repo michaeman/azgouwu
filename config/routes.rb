@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'china_tours/reason'
+
+  get 'china_tours/service'
+
+  get 'china_tours/signup'
+
   get 'home/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

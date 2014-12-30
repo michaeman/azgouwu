@@ -1,0 +1,2 @@
+module ChinaToursHelper
+end
