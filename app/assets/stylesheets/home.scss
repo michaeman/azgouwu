@@ -1,11 +1,10 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import "shared";
-
+$siteColor : #12232B;
 $panelColor: #F0F0F0;
 
-.home.index{
+.home{
   .headline {
     background-image: image-url('home-effect.jpg');
   }
@@ -42,13 +41,6 @@ $panelColor: #F0F0F0;
 
 // for tablet devices and larger
 @media (min-width: 768px) { 
-  .headline {
-    height: 500px;
-    h1 {
-    text-align: center;
-    }
-  }
-
   .gap-space {
     padding-top: 5%;
     padding-bottom: 5%;
@@ -57,8 +49,5 @@ $panelColor: #F0F0F0;
 
 // for small devices
 @media (max-width: 768px) {
-  .container {
-    padding-left: 10% !important;
-    padding-right: 10% !important;
-  }
+  
 }

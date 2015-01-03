@@ -8,7 +8,7 @@
   <%#= javascript_include_tag "http://src.responsive.io/r.js" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="<%= controller.controller_name %>">
   <%= render 'layouts/header' %>
   <%= yield %>
   <%= render 'layouts/footer' %>
