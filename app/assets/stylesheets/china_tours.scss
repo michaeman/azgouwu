@@ -1,12 +1,11 @@
 // Place all the styles related to the ChinaTours controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$siteColor : #12232B;
-$panelColor: #F0F0F0;
+@import "shared";
 
-.headline {
-  background-image: image-url('china-tour-headImage.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  
+.china-tour.reason{
+  .headline {
+    background-image: image-url('china-tour-headImage.jpg');
+  }
 }
+
