@@ -45,8 +45,12 @@ html, body {
   a {
     color: #777;
   }
-  span {
-    color: #D8D8D8;
-    padding-right: 3em;
+}
+
+// for small devices
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 1em;
   }
 }
+
