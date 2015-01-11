@@ -15,8 +15,8 @@ $panelColor: #F0F0F0;
     }
   }
 
-  .before-trip, .after-trip{
-    background-color: $panelColor;
+  .before-trip, .after-trip, .submit-form{
+    // background-color: $panelColor;
     padding-bottom: 1em;
   }
 
@@ -43,7 +43,7 @@ $panelColor: #F0F0F0;
   }
 
   .cost .diy::before {
-    content: "Estimated Cost: "
+    content: "Estimated DIY Cost: "
   }
 
   .cost .service-charge::before {
@@ -53,11 +53,25 @@ $panelColor: #F0F0F0;
   .cost span {
     display: block;
   }
-  // p a {
-  //   color: inherit;
-  //   text-decoration: underline;
-
-  // }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

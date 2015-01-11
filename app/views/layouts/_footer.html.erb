@@ -1,6 +1,20 @@
 <footer class="footer">
 <div class="container">
-    <span>© Copyright - LecongFurniture</span>
-    <%= link_to('Contact Us') %>
+    <div class="col-md-4">
+      <p>© Copyright - LecongFurniture</p>
+      <p>ABN: 29412093352</p>
+      <div class="contact">
+        <p>Email: <%= mail_to("support@lecongfurniture.com.au") %></p>
+        <p>Phone: <a href="tel:+61467983842"><%= number_to_phone(467983842, country_code: 61, delimiter: " ") %></a></p>
+      </div>
+      </div>
+    <div class="col-md-4">
+      <address>
+      Address:</br>
+      161 / 173 City Rd</br>
+      Southbank VIC 3006</br>
+      Australia
+      </address>
+    </div>
 </div>
 </footer>
