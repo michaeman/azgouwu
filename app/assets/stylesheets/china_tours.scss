@@ -1,10 +1,63 @@
 // Place all the styles related to the ChinaTours controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$siteColor : #12232B;
+$panelColor: #F0F0F0;
 
 .china_tours{
   .headline {
     background-image: image-url('china-tour-headImage.jpg');
+
+    p {
+      padding-top: 1em;
+      font-size: large;
+      color: #E2F2EF;
+    }
   }
+
+  .before-trip, .after-trip{
+    background-color: $panelColor;
+    padding-bottom: 1em;
+  }
+
+  .service-content {
+    margin-left: 2em;
+  }
+
+  .service-option {
+    position: absolute;
+  }
+
+  .glyphicon.glyphicon-ok {
+    color: #3FF291;
+  }
+
+  .moreinfo {
+    display: none;
+    padding-left: 2em;
+  }
+
+  p span.glyphicon {
+    float: right;
+    color: rgba(128, 128, 128, 0.45);
+  }
+
+  .cost .diy::before {
+    content: "Estimated Cost: "
+  }
+
+  .cost .service-charge::before {
+    content: "Service Charge: "
+  }
+
+  .cost span {
+    display: block;
+  }
+  // p a {
+  //   color: inherit;
+  //   text-decoration: underline;
+
+  // }
 }
+
 
