@@ -31,6 +31,8 @@ gem 'autoprefixer-rails'
 gem 'rails_12factor', group: :production
 gem 'unicorn'
 
+# Fix issues with turbolinks and jquery
+gem 'jquery-turbolinks'
 
 
 # Use ActiveModel has_secure_password
