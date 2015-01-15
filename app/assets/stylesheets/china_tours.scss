@@ -54,6 +54,50 @@ $secondColor: #3FF291;
     display: block;
   }
 
+  #service-fee {
+    margin-top: 2em;
+  }
+  #service-fee-header {
+    position: absolute;
+    width: 300px;
+    background-color: $siteColor;
+    border-radius: 10px 10px 0px 0px;
+    color: #EFEFEF;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #service-fee-content {
+    width: 300px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgba(198, 198, 198, 0.26);
+    border-radius: 10px 10px 10px 10px;
+    .item {
+      padding-bottom: 10px;
+      p {
+        margin-bottom: 0px;
+      }
+      .item-price {
+        text-align: right;
+      }
+      .item-name {
+        font-weight: bold;
+      }
+    }
+    #total-fee {
+      text-align: right;
+      span#fee {
+        border-top: 2px solid;
+      }
+      span#total-fee-head {
+        font-weight: bold;
+      }
+    }
+  }
+
+
   @media (min-width: 992px) {
     .service-info, .book-service {
       padding-left: 5%;

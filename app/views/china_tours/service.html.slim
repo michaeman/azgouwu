@@ -13,9 +13,9 @@ div.headline
       div.col-xs-4.prog-todo Personal Info
       div.col-xs-4.prog-todo Payment
 
-  div.service-info
-    div.before-trip
-      div.container
+  div.container
+    div.service-info.col-sm-6
+      div.before-trip
         <h2>Before your trip</h2>
         div.service
           div.service-option
@@ -51,45 +51,43 @@ div.headline
                 <span class="service-charge">$20</span>
               
             
-    div.container
-      <h2>During your trip</h2>
+      div.during-trip
+        <h2>During your trip</h2>
+        div.service
+          div.service-option
+            = check_box_tag 'pickup', '1'  
+          div.service-content
+            <p>Arrange an airport pickup for you <a class="display-info">More Info</a></p>
+            div.moreinfo
+              <p>[optional]</p>
+              div.cost
+                <span class="diy">$20</span>
+                <span class="service-charge">$100</span>           
+              <p></p>
+              <p>If you decide to not use our service, you may also choose to travel with the airbus($20) from the airport for direct transit to the hotel. Our local expert will then be waiting for you at the hotel.</p>
+      
+        div.service
+          div.service-option
+            span.fa.fa-check      
+          div.service-content
+            <p>3-day full time accompanying local expert <a class="display-info">More Info</a></p>
+            div.moreinfo
+              div.cost
+                <span>$100 per additional day</span>            
+              <p></p>
+              <p>From the time you are ready to leave your hotel, our local expert will accompany you touring around the market, providing shopping advices, bargaining product prices for you and making payment for your deposits in Chinese Yuan.</p>
+              <p>Doing bussiness in China usually requires good bargaining skills. With years of experience in the furniture industry, especially in the Lecong market, our local expert will not let you down. Of course, our local expert is fluent in English.</p>  
 
-      div.service
-        div.service-option
-          = check_box_tag 'pickup', '1'  
-        div.service-content
-          <p>Arrange an airport pickup for you <a class="display-info">More Info</a></p>
-          div.moreinfo
-            <p>[optional]</p>
-            div.cost
-              <span class="diy">$20</span>
-              <span class="service-charge">$100</span>           
-            <p></p>
-            <p>If you decide to not use our service, you may also choose to travel with the airbus($20) from the airport for direct transit to the hotel. Our local expert will then be waiting for you at the hotel.</p>
-    
-      div.service
-        div.service-option
-          span.fa.fa-check      
-        div.service-content
-          <p>3-day full time accompanying local expert <a class="display-info">More Info</a></p>
-          div.moreinfo
-            div.cost
-              <span>$100 per additional day</span>            
-            <p></p>
-            <p>From the time you are ready to leave your hotel, our local expert will accompany you touring around the market, providing shopping advices, bargaining product prices for you and making payment for your deposits in Chinese Yuan.</p>
-            <p>Doing bussiness in China usually requires good bargaining skills. With years of experience in the furniture industry, especially in the Lecong market, our local expert will not let you down. Of course, our local expert is fluent in English.</p>  
-
-      div.service
-        div.service-option
-          span.fa.fa-check       
-        div.service-content
-          <p>Pay for your furniture deposits <a class="display-info">More Info</a></p>
-          div.moreinfo
-            <p>After you selecting the products and agreeing their price with the supplier, deposits have to be paid. Our local expert can help you make that payment in CNY, you will then only need to make the payments to us in AUD, relieving you from the hassle of international money transfers. The exchange rate will be according to the rate provided by NAB bank at the time of payment.</p>
+        div.service
+          div.service-option
+            span.fa.fa-check       
+          div.service-content
+            <p>Pay for your furniture deposits <a class="display-info">More Info</a></p>
+            div.moreinfo
+              <p>After you selecting the products and agreeing their price with the supplier, deposits have to be paid. Our local expert can help you make that payment in CNY, you will then only need to make the payments to us in AUD, relieving you from the hassle of international money transfers. The exchange rate will be according to the rate provided by NAB bank at the time of payment.</p>
 
 
-    div.after-trip
-      div.container
+      div.after-trip
         <h2>After your trip</h2>
 
         div.service
@@ -116,16 +114,19 @@ div.headline
               <p>This process normally takes around 1 month. Shipment tracking number will be provided. We will notify you one day before the products arriving at your doorstep.</p>
 
 
-  div.service-fee
-    <h3>Service Fee:</h3>
-    div.item
-      <p class="item-name">Standard Package:</p>
-      <p class="item-price">5% furniture expenditure + $500</p>
-    
-    div.item
-      <p class="item-name">Visa Application Service:</p>
-      <p class="item-price">$50</p>
-    
+    div#service-fee.col-sm-5.hidden-xs
+      div#service-fee-header
+        h3 Service Fees:
+      div#service-fee-content
+        div.item
+          <p class="item-name">Standard Package:</p>
+          <p class="item-price">5% furniture expenditure + $500</p>
+        div.item
+          <p class="item-name">Visa Application Service:</p>
+          <p class="item-price">$50</p>
+        div#total-fee
+          span#total-fee-head Total:&nbsp;&nbsp;
+          span#fee 5% furniture expenditure + $550
   
 
   div.book-service
