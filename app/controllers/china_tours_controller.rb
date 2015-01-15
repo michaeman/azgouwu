@@ -5,6 +5,6 @@ class ChinaToursController < ApplicationController
   def service
   end
 
-  def signup
+  def fee
   end
 end

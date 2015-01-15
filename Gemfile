@@ -34,6 +34,8 @@ gem 'unicorn'
 # Fix issues with turbolinks and jquery
 gem 'jquery-turbolinks'
 
+# slim the html
+gem 'slim'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

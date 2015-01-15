@@ -16,9 +16,13 @@ $secondColor: #3FF291;
     }
   }
 
-  .before-trip, .after-trip, .submit-form{
-    // background-color: $panelColor;
+  .before-trip, .after-trip{
     padding-bottom: 1em;
+  }
+
+  .book-service {
+    padding-top: 2em;
+    padding-bottom: 3em;
   }
 
   .service-content {
@@ -48,6 +52,12 @@ $secondColor: #3FF291;
 
   .cost span {
     display: block;
+  }
+
+  @media (min-width: 992px) {
+    .service-info, .book-service {
+      padding-left: 5%;
+    }
   }
 }
 
