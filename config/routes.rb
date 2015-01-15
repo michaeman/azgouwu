@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'china_tours/service'
 
-  get 'china_tours/signup'
+  get 'china_tours/fee'
 
   get 'home/index', as: 'home'
 

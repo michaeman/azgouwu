@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $siteColor : #12232B;
 $panelColor: #F0F0F0;
+$secondColor: #3FF291;
 
 .china_tours{
   .headline {
@@ -35,11 +36,6 @@ $panelColor: #F0F0F0;
   .moreinfo {
     display: none;
     padding-left: 2em;
-  }
-
-  p span.glyphicon {
-    float: right;
-    color: rgba(128, 128, 128, 0.45);
   }
 
   .cost .diy::before {

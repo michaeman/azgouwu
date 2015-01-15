@@ -1,5 +1,5 @@
 $siteColor : #12232B;
-
+$secondColor: #3FF291;
 
 .headline {
   box-sizing: border-box;
@@ -17,6 +17,39 @@ $siteColor : #12232B;
   padding-top: 10%;
   padding-bottom: 10%;
 }
+
+
+// custom progress tracker
+.prog-tracker {
+  padding-top: 2em;
+  padding-bottom: 1em;
+
+  .col-xs-4 {
+    padding: 1em 0.2em;
+    text-align: center;
+  }
+
+  .col-xs-4.prog-complete {
+    border-bottom: 4px solid $secondColor;
+  }
+
+  .col-xs-4.prog-focus {
+    background-color: rgba(198, 198, 198, 0.26);
+  }
+
+  .col-xs-4.prog-todo {
+    border-bottom: 4px solid silver;
+    color: silver;
+  }
+}
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
+
 
 // for tablet devices and larger
 @media (min-width: 768px) { 
