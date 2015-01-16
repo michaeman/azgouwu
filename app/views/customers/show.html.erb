@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @customer.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @customer.last_name %>
+</p>
+
+<p>
+  <strong>Middle name:</strong>
+  <%= @customer.middle_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Addr line 1:</strong>
+  <%= @customer.addr_line_1 %>
+</p>
+
+<p>
+  <strong>Addr line 2:</strong>
+  <%= @customer.addr_line_2 %>
+</p>
+
+<p>
+  <strong>Addr line 3:</strong>
+  <%= @customer.addr_line_3 %>
+</p>
+
+<p>
+  <strong>Post code:</strong>
+  <%= @customer.post_code %>
+</p>
+
+<p>
+  <strong>Addr city:</strong>
+  <%= @customer.addr_city %>
+</p>
+
+<p>
+  <strong>Addr state:</strong>
+  <%= @customer.addr_state %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @customer.phone %>
+</p>
+
+<p>
+  <strong>Overseas phone:</strong>
+  <%= @customer.overseas_phone %>
+</p>
+
+<p>
+  <strong>Reference num:</strong>
+  <%= @customer.reference_num %>
+</p>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

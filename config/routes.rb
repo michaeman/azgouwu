@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :customers
+
   get 'china_tours/reason'
 
   get 'china_tours/service'
