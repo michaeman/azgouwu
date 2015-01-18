@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'china_tours/fee'
 
+  post 'china_tours/create'
+
   get 'home/index', as: 'home'
 
   # The priority is based upon order of creation: first created -> highest priority.

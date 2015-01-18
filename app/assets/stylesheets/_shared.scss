@@ -49,6 +49,24 @@ $secondColor: #3FF291;
   display:         flex;
 }
 
+form {
+  label.essential::after {
+    content: '*';
+  }
+
+  #customer_addr_state {
+    width: 80px;
+  }
+
+  #customer_post_code {
+    width: 100px;
+  }
+
+  label[for="customer_addr_line_1"] {
+    min-width: 140px;
+  }
+}
+
 
 
 // for tablet devices and larger
