@@ -26,13 +26,29 @@ $(document).ready(function() {
   // show and hide info, china-tour -> how we can help
   $("p:has(a[class*='display-info'])").click (function(evt) {
     evt.preventDefault();
-    $(this).siblings('div').slideToggle(300);
+    $(this).siblings('div').slideToggle(500);
     if ($(this).find('a').text() == "More Info") {
       $(this).find('a').text("Less");
     } else {
       $(this).find('a').text("More Info");
     }
   });
+
+  // china_tour -> continue button 
+  $(".china_tours #continue-btn").click (function() {
+    $(".china_tours .choose-service").animate({width:'toggle'},350);
+  });
+
+  // form validation
+  $('form').validate({
+    rules: {
+      post_code: {
+        rangelength: [4,4],
+        digits: true
+      }
+    }
+  });
+
 
 });
 

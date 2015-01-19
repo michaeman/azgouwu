@@ -65,6 +65,11 @@ form {
   label[for="customer_addr_line_1"] {
     min-width: 140px;
   }
+
+  label.error {
+    color: red;
+    min-width: 300px;
+  }
 }
 
 

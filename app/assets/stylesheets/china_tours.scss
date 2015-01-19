@@ -20,7 +20,7 @@ $secondColor: #3FF291;
     padding-bottom: 1em;
   }
 
-  .book-service {
+  .book-service, .tour-submit-button {
     padding-top: 2em;
     padding-bottom: 3em;
   }
@@ -99,6 +99,12 @@ $secondColor: #3FF291;
 
   .btn {
     margin-left: 30%;
+  }
+
+  .booking-form {
+    // display: none;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 
 
