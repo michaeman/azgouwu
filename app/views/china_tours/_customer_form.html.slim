@@ -45,7 +45,20 @@ div.form-group
   = label :customer, :post_code, "Postcode<span>*</span>".html_safe, class:"col-sm-2 control-label essential"
   div.col-sm-3
     = text_field :customer, :post_code, class:"form-control digits", required:true, title: "Please enter the correct Australian post code"
-  
-div.actions.tour-submit-button
-  = submit_tag("Book a Trip", class: "btn btn-primary btn-lg")
+
+div.form-group
+  div.col-sm-3
+    div#go-back-button
+      a Go Back
+  div.col-sm-5
+    div.actions#tour-submit-button
+      = submit_tag("Book a Trip", class: "btn btn-primary btn-lg")
+
+
+
+
+
+
+
+
 
