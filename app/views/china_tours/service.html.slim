@@ -9,9 +9,9 @@ div.headline
 
   div.container
     div.prog-tracker.row-eq-height
-      div.col-xs-4.prog-complete.prog-focus Choose Services
-      div.col-xs-4.prog-todo Personal Info
-      div.col-xs-4.prog-todo Payment
+      div.col-xs-4.prog-complete.prog-focus.step-1 Choose Services
+      div.col-xs-4.prog-todo.step-2 Personal Info
+      div.col-xs-4.prog-todo.step-3 Payment
 
   / error message display
   - if @customer.errors.any? 

@@ -37,10 +37,10 @@ $(document).ready(function() {
   // china_tour -> continue button 
   $(".china_tours .booking-form").hide();
   $(".china_tours #continue-btn").click (function() {
-    // $(".china_tours .choose-service").animate({width:'toggle'},350);
-    // $(".china_tours .booking-form").animate({width:'toggle'},350);
     $(".china_tours .choose-service").hide("slide", {direction: "left"}, 400);
     $(".china_tours .booking-form").show("slide", {direction: "right"}, 800);
+    $(".china_tours .prog-tracker .step-1").removeClass("prog-focus");
+    $(".china_tours .prog-tracker .step-2").removeClass("prog-todo").addClass("prog-focus prog-complete");
   });
 
   // form validation
