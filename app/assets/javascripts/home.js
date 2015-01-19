@@ -54,18 +54,17 @@ $(document).ready(function() {
     },
     "Please check your input."
   );
-  $('form').validate({
-    rules: {
-      post_code: {
-        rangelength: [4,4],
-        digits: true
-      },
-      phone_num: {
-        regex: /^\+?\d{5,15}$/
-      }
-    }
-  });
-
-
+  $('form').validate();
+  $('#customer_post_code').rules(
+    'add', 
+    {
+      rangelength: [4,4],
+      digits: true
+    });
+  $('#customer_phone').rules(
+    'add', 
+    {
+      regex: /^\+?\d{5,15}$/
+    });
 });
 
