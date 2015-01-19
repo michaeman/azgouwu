@@ -42,6 +42,7 @@ $(document).ready(function() {
     $(".china_tours .booking-form").show("slide", {direction: "right"}, 800);
     $(".china_tours .prog-tracker .step-1").removeClass("prog-focus");
     $(".china_tours .prog-tracker .step-2").removeClass("prog-todo").addClass("prog-focus prog-complete");
+    $(".china_tours #customer_first_name").focus();
   });
 
   // form validation
