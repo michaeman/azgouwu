@@ -146,58 +146,7 @@ div.headline
         div.btn.btn-primary.btn-lg#continue-btn Book a Service
 
 
-  div.booking-form
-    div.container
-      div.form-group.f-name
-        = label :customer, :first_name, "First Name", class:"col-sm-2 control-label essential"
-        div.col-sm-3
-          = text_field :customer, :first_name, class:"form-control", required:true
-        = label :customer, :last_name, "Last Name", class:"col-sm-2 control-label essential", type:"text"
-        div.col-sm-3
-          = text_field :customer, :last_name, class:"form-control col-sm-4", required:true, type:"text"
-        
-      div.form-group.email
-        = label :customer, :email, class:"col-sm-2 control-label essential"
-        div.col-sm-4
-          = text_field :customer, :email, class:"form-control", required:true, type:"email"
-        
-      div.form-group
-        = label :customer, :phone, class:"col-sm-2 control-label essential"
-        div.col-sm-4
-          = text_field :customer, :phone, class:"form-control", required:true
-        
-      div.form-group
-        = label :customer, :addr_line_1, "Address Line 1", class:"col-sm-2 control-label essential"
-        div.col-sm-4
-          = text_field :customer, :addr_line_1, class:"form-control", required:true
-        
-      div.form-group
-        = label :customer, :addr_line_2, "Address line 2", class:"col-sm-2 control-label"
-        div.col-sm-4
-          = text_field :customer, :addr_line_2, class:"form-control"
-        
-      div.form-group
-        = label :customer, :addr_line_3, "Address line 3", class:"col-sm-2 control-label"
-        div.col-sm-4
-          = text_field :customer, :addr_line_3, class:"form-control"
-        
-      div.form-group
-        = label :customer, :addr_city, "City", class:"col-sm-2 control-label essential"
-        div.col-sm-4
-          = text_field :customer, :addr_city, class:"form-control", required:true, type:"text"
-        
-      div.form-group
-        = label :customer, :addr_state, "State", class:"col-sm-2 control-label essential"
-        div.col-sm-1
-          = select :customer, :addr_state, ['VIC', 'NSW', 'ACT', 'NT', 'Qld', 'SA', 'Tas', 'WA'], {}, {class:"form-control", required:true}
-        
-      div.form-group
-        = label :customer, :post_code, "Postcode", class:"col-sm-2 control-label essential"
-        div.col-sm-3
-          = text_field :customer, :post_code, class:"form-control digits", required:true, name: "post_code", title: "Please enter the correct Australian post code"
-        
-      div.actions.tour-submit-button
-        = submit_tag("Book a Trip", class: "btn btn-primary btn-lg")
+  = render 'customer_form'
 
 
 

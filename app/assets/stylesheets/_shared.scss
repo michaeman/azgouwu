@@ -50,8 +50,15 @@ $secondColor: #3FF291;
 }
 
 form {
-  label.essential::after {
-    content: '*';
+  // label.essential::after {
+  //   content: '*';
+  // }
+  // label.essential span {
+  //   color: red;
+  // }
+
+  label.essential span::before {
+    content: " ";
   }
 
   #customer_addr_state {
