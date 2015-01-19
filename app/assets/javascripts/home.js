@@ -34,6 +34,7 @@ $(document).ready(function() {
     }
   });
 
+
   // china_tour -> continue button 
   $(".china_tours .booking-form").hide();
   $(".china_tours #continue-btn").click (function() {
@@ -44,11 +45,22 @@ $(document).ready(function() {
   });
 
   // form validation
+  jQuery.validator.addMethod(
+    "regex",
+    function(value, element, regexp) {
+        var re = new RegExp(regexp);
+        return this.optional(element) || re.test(value);
+    },
+    "Please check your input."
+  );
   $('form').validate({
     rules: {
       post_code: {
         rangelength: [4,4],
         digits: true
+      },
+      phone_num: {
+        regex: /^\+?\d{5,15}$/
       }
     }
   });

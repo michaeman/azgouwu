@@ -14,7 +14,7 @@ div.form-group.email
 div.form-group
   = label :customer, :phone, "Phone<span>*</span>".html_safe, class:"col-sm-2 control-label essential"
   div.col-sm-4
-    = text_field :customer, :phone, class:"form-control", required:true
+    = text_field :customer, :phone, class:"form-control", required:true, name: "phone_num", title: "Please enter a valid phone number (no spaces)"
   
 div.form-group
   = label :customer, :addr_line_1, "Address Line 1<span>*</span>".html_safe, class:"col-sm-2 control-label essential"
