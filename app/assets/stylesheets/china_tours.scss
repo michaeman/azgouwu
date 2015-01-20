@@ -26,8 +26,10 @@ $secondColor: #3FF291;
   }
 
   #go-back-button{
-    padding-top: 40px;
+    margin-top: 30px;
     width: 8em;
+    padding: 10px;
+    cursor: pointer;
   }
 
   .service-content {
@@ -121,7 +123,6 @@ $secondColor: #3FF291;
   }
   #go-back-button a:hover {
     text-decoration: none;
-    cursor: pointer;
   }
 
   @media (min-width: 992px) {
