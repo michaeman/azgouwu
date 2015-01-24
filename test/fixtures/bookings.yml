@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  visa_service: false
+  flight_service: false
+  hotel_service: false
+  pickup_service: false
+  standard_service: false
+  notes: MyText
+  customer_id: 
+
+two:
+  visa_service: false
+  flight_service: false
+  hotel_service: false
+  pickup_service: false
+  standard_service: false
+  notes: MyText
+  customer_id: 

@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  resources :bookings
+
   resources :customers
 
   get 'china_tours/reason'
 
-  get 'china_tours/service'
+  get 'china_tours/service', as: 'china_tours'
 
   get 'china_tours/fee'
 

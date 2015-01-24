@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Visa service:</strong>
+  <%= @booking.visa_service %>
+</p>
+
+<p>
+  <strong>Flight service:</strong>
+  <%= @booking.flight_service %>
+</p>
+
+<p>
+  <strong>Hotel service:</strong>
+  <%= @booking.hotel_service %>
+</p>
+
+<p>
+  <strong>Pickup service:</strong>
+  <%= @booking.pickup_service %>
+</p>
+
+<p>
+  <strong>Standard service:</strong>
+  <%= @booking.standard_service %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @booking.notes %>
+</p>
+
+<p>
+  <strong>Customer:</strong>
+  <%= @booking.customer %>
+</p>
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

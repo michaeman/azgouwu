@@ -37,6 +37,18 @@ gem 'jquery-turbolinks'
 # slim the html
 gem 'slim'
 
+# secret key management
+gem "figaro"
+
+# rspec testing
+gem "rspec-rails", :group => [:test, :development]
+group :test do
+  gem "factory_girl_rails", "~> 4.0"
+  gem "capybara"
+  gem "guard-rspec"
+end
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
