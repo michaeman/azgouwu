@@ -32,7 +32,7 @@ div.headline
           <h2>Before your trip</h2>
           div.service
             div.service-option
-              = check_box_tag 'visa', '1'
+              = check_box :booking, :visa_service
             div.service-content
               p 
                 | Arrange your visa 
@@ -45,7 +45,7 @@ div.headline
 
           div.service
             div.service-option
-              = check_box_tag 'flight_ticket', '1'           
+              = check_box :booking, :flight_service           
             div.service-content
               <p>Book your flight tickets to Guangzhou (2-way) <a class="display-info">More Info</a></p>
               div.moreinfo
@@ -56,7 +56,7 @@ div.headline
           
           div.service
             div.service-option
-              = check_box_tag 'hotel', '1'
+              = check_box :booking, :hotel_service
             div.service-content
               <p>Book your hotel near Lecong market <a class="display-info">More Info</a></p>
               div.moreinfo
@@ -70,7 +70,7 @@ div.headline
           <h2>During your trip</h2>
           div.service
             div.service-option
-              = check_box_tag 'pickup', '1'  
+              = check_box :booking, :pickup_service  
             div.service-content
               <p>Arrange an airport pickup for you <a class="display-info">More Info</a></p>
               div.moreinfo
@@ -83,7 +83,8 @@ div.headline
         
           div.service
             div.service-option
-              span.fa.fa-check      
+              span.fa.fa-check
+              = check_box_tag 'booking[standard_service]', "1", true, {type: 'hidden'}      
             div.service-content
               <p>3-day full time accompanying local expert <a class="display-info">More Info</a></p>
               div.moreinfo

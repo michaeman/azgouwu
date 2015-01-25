@@ -12,4 +12,14 @@ FactoryGirl.define do
     phone "0367874567"
     overseas_phone "+8617822278988"
   end
+
+  factory :booking do 
+    visa_service true
+    flight_service true
+    hotel_service true
+    pickup_service true
+    standard_service true
+    notes "nothing"
+    association :customer
+  end
 end
