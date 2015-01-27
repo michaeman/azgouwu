@@ -11,54 +11,104 @@ div.container
     div.col-xs-4.prog-complete.step-2 Personal Info
     div.col-xs-4.prog-complete.prog-focus.step-3 Payment
 
-div.confirmation
-    div.container
+div#confirmation
+    div.container#confirmation-container
       - if not @booking
         h1 You haven't made a booking yet.
         a href='/china_tours/service'
           div.btn.btn-primary.btn-lg Book a Service
       - else
-        h2 Thank you for your booking of China Furniture Tour
-        h3 Your booking information is as follow:
-        table.table.table-hover
-          tr
-            th scope='row' Name
-            td = @customer.first_name + ' ' + @customer.last_name
-          tr
-            th scope='row' Email
-            td = @customer.email
-          tr
-            th scope='row' Phone
-            td = @customer.phone
-          tr
-            th scope='row' Payment Reference Number
-            td = @customer.reference_num
-          tr
-            th scope='row' Booking ID
-            td = @booking.id
-          tr
-            th scope='row' Visa Application Service
-            td 
-              - if @booking.visa_service
-                | Yes
-              - else 
-                | No
-          tr
-            th scope='row' Flight Booking Service
-            td 
-              - if @booking.flight_service
-                | Yes
-              - else 
-                | No
-          tr
-            th scope='row' Airport Pickup Service
-            td 
-              - if @booking.pickup_service
-                | Yes
-              - else 
-                | No
-          tr
-            th scope='row' Standard Service
-            td Yes
+        h2#confirmation-title Thank you for booking China Furniture Tour
+        div#booking-info
+          h3 Your booking information is as follow:
+          table.table.table-hover#confirmation-table
+            tr
+              th scope='row' Name
+              td = @customer.first_name + ' ' + @customer.last_name
+            tr
+              th scope='row' Email
+              td = @customer.email
+            tr
+              th scope='row' Phone
+              td = @customer.phone
+            tr
+              th scope='row' Visa Application Service
+              td 
+                - if @booking.visa_service
+                  | Yes
+                - else 
+                  | No
+            tr
+              th scope='row' Flight Booking Service
+              td 
+                - if @booking.flight_service
+                  | Yes
+                - else 
+                  | No
+            tr
+              th scope='row' Hotel Booking Service
+              td 
+                - if @booking.hotel_service
+                  | Yes
+                - else 
+                  | No
+            tr
+              th scope='row' Airport Pickup Service
+              td 
+                - if @booking.pickup_service
+                  | Yes
+                - else 
+                  | No
+            tr
+              th scope='row' Standard Service
+              td Yes
+            tr.important
+              th scope='row' Payment Reference Number
+              td = @customer.reference_num
+            tr.important
+              th scope='row' Booking ID
+              td = @booking.id
+          p 
+            |
+              *please print out this page for your future reference. An email containing the same information should be sent to you soon. 
+
+        div#next-step
+          h3 Next Step
+          p We will get in touch with you soon to discuss with you your trip details.
+          / div#payment-info
+            h4 Payments 
+            p 
+              |
+                You don't need to pay us all at once. We charge our service fees progressively. Read more about fees 
+              a.no-styling href='china_tours/fee' here.
+            p 
+              |
+                Please make payments via Bank Transfer (more payment options will be added soon) to the following account, 
+              span.important including your "Payment Reference Number" as the payment message
+            div#bank-account
+              p.tag Account Name
+              p.data Lecong Furniture
+              p.tag BSB
+              p.data 923100
+              p.tag Account Number
+              p.data 83422721
+
+
+        div#questions
+          h3 Questions?
+          p 
+            | Feel free to send us an email at 
+            = mail_to("support@lecongfurniture.com.au", "support@lecongfurniture.com.au", class: 'no-styling')
+          p 
+            | Or call us at 
+            a.no-styling href="tel:+61467983842"
+              = number_to_phone(467983842, country_code: 61, delimiter: " ")
+
+
+
+
+
+
+
 
 

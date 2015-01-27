@@ -29,7 +29,6 @@ $secondColor: #3FF291;
     margin-top: 30px;
     width: 8em;
     padding: 10px;
-    cursor: pointer;
   }
 
   .service-content {
@@ -113,10 +112,6 @@ $secondColor: #3FF291;
     margin-bottom: 2em;
   }
 
-  a:hover {
-    background-color: transparent !important;
-  }
-
   #go-back-button a {
     border-bottom: 2px solid;
     font-size: 18px;
@@ -125,9 +120,36 @@ $secondColor: #3FF291;
     text-decoration: none;
   }
 
+  #confirmation {
+    margin-bottom: 60px;
+    #booking-info, #next-step {
+      padding-bottom: 10px;
+    }
+    #confirmation-title {
+      text-align: center;
+      margin: 40px 0px;
+    }
+    #confirmation-table {
+      margin-bottom: 0px;
+      td, th {
+        border: none;
+      }
+      tr.important {
+        color: red;
+      }
+    }
+  }
+
+  span.important {
+    color: red;
+  }
+
   @media (min-width: 992px) {
     .service-info, .book-service {
       padding-left: 5%;
+    }
+    #confirmation-container {
+      max-width: 950px;
     }
   }
 }
