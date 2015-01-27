@@ -13,7 +13,7 @@ class ChinaToursController < ApplicationController
   # POST /customers
   # POST /customers.json
   def create
-    @customer = Customer.new(customer_params)
+    @customer = Customer.create_without_ref_num(customer_params)
     @booking = @customer.bookings.new(booking_params)
 
     respond_to do |format|

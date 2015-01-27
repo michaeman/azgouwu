@@ -6,4 +6,11 @@ class Customer < ActiveRecord::Base
   validates :post_code, format: { with: %r{\d{4}}i }
   validates :addr_state, inclusion: { in: ['VIC', 'NSW', 'ACT', 'NT', 'Qld', 'SA', 'Tas', 'WA'] }
   validates :phone, format: { with: %r{\+?\d{5,15}}i } # a rough guide
+
+  # create new Customer accepting arguments from the form input, assign a random reference_num to it
+  def Customer.create_without_ref_num(param)
+    c = Customer.new(param)
+    c.reference_num = Array.new(10){[*"A".."Z", *"0".."9"].sample}.join
+    return c
+  end
 end
