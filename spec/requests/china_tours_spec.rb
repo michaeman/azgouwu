@@ -7,6 +7,11 @@ RSpec.describe "ChinaTours", :type => :request do
       expect(response).to have_http_status(200)
     end
 
+    it "confirmation page works" do
+      get '/china_tours/confirmation'
+      expect(response).to have_http_status(200)
+    end
+
     it "shows two forms" do
       visit china_tours_path
       expect(page).to have_content("Arrange your visa")
@@ -67,5 +72,29 @@ RSpec.describe "ChinaTours", :type => :request do
 
       # expect(page).to have_content('Customer was successfully created.')
     end
+
+    it "displays confirmation info after book a service" do
+      visit(china_tours_path)
+
+      c = build(:customer)
+      fill_in 'First Name', with: c.first_name
+      fill_in 'Last Name', with: c.last_name
+      fill_in 'Email', with: c.email 
+      fill_in 'Phone', with: c.phone 
+      fill_in 'Address Line 1', with: c.addr_line_1
+      fill_in 'City', with: c.addr_city
+      select c.addr_state, from: "State"
+      fill_in 'Postcode', with: c.post_code
+      click_button 'Book a Trip'
+
+      expect(page).to have_content('Thank you')
+      expect(page).to have_content(c.email)
+    end
+
+    it "displays no booking is made at the confirmation page" do
+      visit '/china_tours/confirmation'
+      expect(page).to have_content("You haven't made a booking yet")
+    end
+
   end
 end

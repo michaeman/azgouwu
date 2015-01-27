@@ -19,7 +19,8 @@ class ChinaToursController < ApplicationController
     respond_to do |format|
       if @customer.save and @booking.save
         # format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
-        format.html { render 'confirmation' }
+        session[:booking_id] = @booking.id
+        format.html { redirect_to '/china_tours/confirmation' }
         # format.js { @booking }
         # format.json { render :show, status: :created, location: @customer }
       else
@@ -29,8 +30,14 @@ class ChinaToursController < ApplicationController
     end
   end
 
+  # GET /confirmation
   def confirmation
-
+    if session[:booking_id]
+      @booking = Booking.find(session[:booking_id])
+      @customer = @booking.customer
+    else 
+      @booking = nil
+    end
   end
 
   private

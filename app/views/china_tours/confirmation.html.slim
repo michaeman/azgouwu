@@ -13,47 +13,52 @@ div.container
 
 div.confirmation
     div.container
-      h2 Thank you for your booking of China Furniture Tour
-      h3 Your booking information is as follow:
-      table.table.table-hover
-        tr
-          th scope='row' Name
-          td = @customer.first_name + ' ' + @customer.last_name
-        tr
-          th scope='row' Email
-          td = @customer.email
-        tr
-          th scope='row' Phone
-          td = @customer.phone
-        tr
-          th scope='row' Payment Reference Number
-          td = @customer.reference_num
-        tr
-          th scope='row' Booking ID
-          td = @booking.id
-        tr
-          th scope='row' Visa Application Service
-          td 
-            - if @booking.visa_service
-              | Yes
-            - else 
-              | No
-        tr
-          th scope='row' Flight Booking Service
-          td 
-            - if @booking.flight_service
-              | Yes
-            - else 
-              | No
-        tr
-          th scope='row' Airport Pickup Service
-          td 
-            - if @booking.pickup_service
-              | Yes
-            - else 
-              | No
-        tr
-          th scope='row' Standard Service
-          td Yes
+      - if not @booking
+        h1 You haven't made a booking yet.
+        a href='/china_tours/service'
+          div.btn.btn-primary.btn-lg Book a Service
+      - else
+        h2 Thank you for your booking of China Furniture Tour
+        h3 Your booking information is as follow:
+        table.table.table-hover
+          tr
+            th scope='row' Name
+            td = @customer.first_name + ' ' + @customer.last_name
+          tr
+            th scope='row' Email
+            td = @customer.email
+          tr
+            th scope='row' Phone
+            td = @customer.phone
+          tr
+            th scope='row' Payment Reference Number
+            td = @customer.reference_num
+          tr
+            th scope='row' Booking ID
+            td = @booking.id
+          tr
+            th scope='row' Visa Application Service
+            td 
+              - if @booking.visa_service
+                | Yes
+              - else 
+                | No
+          tr
+            th scope='row' Flight Booking Service
+            td 
+              - if @booking.flight_service
+                | Yes
+              - else 
+                | No
+          tr
+            th scope='row' Airport Pickup Service
+            td 
+              - if @booking.pickup_service
+                | Yes
+              - else 
+                | No
+          tr
+            th scope='row' Standard Service
+            td Yes
 
 
