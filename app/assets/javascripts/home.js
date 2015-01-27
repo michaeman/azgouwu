@@ -51,7 +51,7 @@ $(document).ready(function() {
     $(".china_tours .choose-service").delay(300).show("slide", {direction: "left"}, 800);
     $(".china_tours .prog-tracker .step-1").addClass("prog-focus");
     $(".china_tours .prog-tracker .step-2").addClass("prog-todo").removeClass("prog-focus prog-complete");
-  })
+  });
 
   // form validation
   jQuery.validator.addMethod(

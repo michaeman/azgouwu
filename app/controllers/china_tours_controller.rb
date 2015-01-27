@@ -18,13 +18,19 @@ class ChinaToursController < ApplicationController
 
     respond_to do |format|
       if @customer.save and @booking.save
-        format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
+        # format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
+        format.html { render 'confirmation' }
+        # format.js { @booking }
         # format.json { render :show, status: :created, location: @customer }
       else
         format.html { render :service }
         format.json { render json: @customer.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def confirmation
+
   end
 
   private

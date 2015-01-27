@@ -10,7 +10,9 @@ class Customer < ActiveRecord::Base
   # create new Customer accepting arguments from the form input, assign a random reference_num to it
   def Customer.create_without_ref_num(param)
     c = Customer.new(param)
-    c.reference_num = Array.new(10){[*"A".."Z", *"0".."9"].sample}.join
+    if c.reference_num == nil
+      c.reference_num = Array.new(10){[*"A".."Z", *"0".."9"].sample}.join
+    end
     return c
   end
 end

@@ -1,0 +1,59 @@
+div.headline
+  div.container
+    <h1>How we can help</h1>
+    <p>Our aim is to provide the best services possible solely for our clients. Rest assured that we do not profit from any referrer or affiliate programmes.</p>
+  
+
+
+div.container
+  div.prog-tracker.row-eq-height
+    div.col-xs-4.prog-complete.step-1 Choose Services
+    div.col-xs-4.prog-complete.step-2 Personal Info
+    div.col-xs-4.prog-complete.prog-focus.step-3 Payment
+
+div.confirmation
+    div.container
+      h2 Thank you for your booking of China Furniture Tour
+      h3 Your booking information is as follow:
+      table.table.table-hover
+        tr
+          th scope='row' Name
+          td = @customer.first_name + ' ' + @customer.last_name
+        tr
+          th scope='row' Email
+          td = @customer.email
+        tr
+          th scope='row' Phone
+          td = @customer.phone
+        tr
+          th scope='row' Payment Reference Number
+          td = @customer.reference_num
+        tr
+          th scope='row' Booking ID
+          td = @booking.id
+        tr
+          th scope='row' Visa Application Service
+          td 
+            - if @booking.visa_service
+              | Yes
+            - else 
+              | No
+        tr
+          th scope='row' Flight Booking Service
+          td 
+            - if @booking.flight_service
+              | Yes
+            - else 
+              | No
+        tr
+          th scope='row' Airport Pickup Service
+          td 
+            - if @booking.pickup_service
+              | Yes
+            - else 
+              | No
+        tr
+          th scope='row' Standard Service
+          td Yes
+
+
