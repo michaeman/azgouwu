@@ -20,6 +20,9 @@ class ChinaToursController < ApplicationController
       if @customer.save and @booking.save
         # format.html { redirect_to @customer, notice: 'Customer was successfully created.' }
         session[:booking_id] = @booking.id
+        # mailer testing
+        TourMailer.booking.deliver_now
+        
         format.html { redirect_to '/china_tours/confirmation' }
         # format.js { @booking }
         # format.json { render :show, status: :created, location: @customer }
