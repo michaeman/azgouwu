@@ -40,6 +40,9 @@ gem 'slim'
 # secret key management
 gem "figaro"
 
+# email css parsing
+gem 'roadie-rails'
+
 # rspec testing
 gem "rspec-rails", :group => [:test, :development]
 group :test do

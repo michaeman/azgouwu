@@ -1,0 +1,51 @@
+table.table.table-hover#confirmation-table
+  tr
+    th scope='row' Name
+    td = @customer.first_name + ' ' + @customer.last_name
+  tr
+    th scope='row' Email
+    td = @customer.email
+  tr
+    th scope='row' Phone
+    td = @customer.phone
+  tr
+    th scope='row' Visa Application Service
+    td 
+      - if @booking.visa_service
+        | Yes
+      - else 
+        | No
+  tr
+    th scope='row' Flight Booking Service
+    td 
+      - if @booking.flight_service
+        | Yes
+      - else 
+        | No
+  tr
+    th scope='row' Hotel Booking Service
+    td 
+      - if @booking.hotel_service
+        | Yes
+      - else 
+        | No
+  tr
+    th scope='row' Airport Pickup Service
+    td 
+      - if @booking.pickup_service
+        | Yes
+      - else 
+        | No
+  tr
+    th scope='row' Standard Service
+    td 
+      - if @booking.standard_service
+        | Yes
+      - else 
+        | No
+  tr.important
+    th scope='row' Payment Reference Number
+    td = @customer.reference_num
+  tr.important
+    th scope='row' Booking ID
+    td = @booking.id

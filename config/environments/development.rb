@@ -41,7 +41,8 @@ Rails.application.configure do
   # customized
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
-  
+  # An overview of all previews is accessible at http://localhost:3000/rails/mailers
+  config.action_mailer.preview_path = "#{Rails.root}/spec/mailers/preview"
   config.action_mailer.smtp_settings = { 
     address: "smtp.zoho.com",
     port: 465,

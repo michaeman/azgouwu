@@ -1,3 +1,23 @@
-TourMailer#booking
+Lecong Furniture
 
-<%= @greeting %>, find me in app/views/tour_mailer/booking.text.erb
+Thank you for booking China Furniture Tour
+
+
+Your booking information is as follow:
+
+Name: <%= @customer.first_name + ' ' + @customer.last_name %>
+Email: <%= @customer.email %>
+Phone: <%= @customer.phone %>
+Visa Application Service: <%= @booking.visa_service ? 'Yes' : 'No' %>
+Flight Booking Service: <%= @booking.flight_service ? 'Yes' : 'No' %>
+Hotel Booking Service: <%= @booking.hotel_service ? 'Yes' : 'No' %>
+Airport Pickup Service: <%= @booking.pickup_service ? 'Yes' : 'No' %>
+Standard Service: <%= @booking.standard_service ? 'Yes' : 'No' %>
+Payment Reference Number: <%= @customer.reference_num %>
+Booking ID: <%= @booking.id %>
+
+Next Step?
+We will get in touch with you soon to discuss with you your trip details.
+
+Questions?
+Feel free to reply to this email
