@@ -45,6 +45,38 @@ $(document).ready(function() {
     $(".china_tours #customer_first_name").focus();
   });
 
+  // china_tour -> service fee table
+  $('.china_tours #booking_visa_service').click(function() {
+  $('.china_tours #booking_visa_service').toggle (
+    function() {
+      $('.china_tours #service-fee #visa-service-item').fadeIn('fast');
+      current_price = parseInt($('.china_tours #service-fee #service-fee-number').html());
+      $('.china_tours #service-fee #service-fee-number').html(current_price + 50);
+    },
+    function() {
+      $('.china_tours #service-fee #visa-service-item').fadeOut('fast');
+      current_price = parseInt($('.china_tours #service-fee #service-fee-number').html());
+      $('.china_tours #service-fee #service-fee-number').html(current_price - 50);
+    }
+    // $('.china_tours #service-fee #visa-service-item').fadeToggle();
+    // current_price = parseInt($('.china_tours #service-fee #service-fee-number').html());
+    // $('.china_tours #service-fee #visa-service-item').toggle(function(){
+    //   $('.china_tours #service-fee #service-fee-number').html(current_price + 50);
+    // }, function(){
+    //   $('.china_tours #service-fee #service-fee-number').html(current_price - 50);
+    // });
+  )});
+
+  $('.china_tours #booking_flight_service').click (function() {
+    $('.china_tours #service-fee #flight-service-item').fadeToggle();
+  });
+  $('.china_tours #booking_hotel_service').click (function() {
+    $('.china_tours #service-fee #hotel-service-item').fadeToggle();
+  });
+  $('.china_tours #booking_pickup_service').click (function() {
+    $('.china_tours #service-fee #pickup-service-item').fadeToggle();
+  });
+
   // go-back button
   $(".china_tours #go-back-button").click(function() {
     $(".china_tours .booking-form").hide("slide", {direction: "right"}, 400);

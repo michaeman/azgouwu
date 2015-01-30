@@ -137,12 +137,22 @@ div.headline
           div.item
             <p class="item-name">Standard Package:</p>
             <p class="item-price">5% furniture expenditure + $500</p>
-          div.item
+          div.item#visa-service-item
             <p class="item-name">Visa Application Service:</p>
             <p class="item-price">$50</p>
+          div.item#flight-service-item
+            p.item-name Flight Booking Service
+            p.item-price $20
+          div.item#hotel-service-item
+            p.item-name Hotel Booking Service
+            p.item-price $20
+          div.item#pickup-service-item
+            p.item-name Airport Pickup Service
+            p.item-price $100
           div#total-fee
             span#total-fee-head Total:&nbsp;&nbsp;
-            span#fee 5% furniture expenditure + $550
+            span.fee 5% furniture expenditure + $
+            span.fee#service-fee-number 550
 
     div.book-service
       div.container

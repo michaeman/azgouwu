@@ -96,7 +96,7 @@ $secondColor: #3FF291;
     }
     #total-fee {
       text-align: right;
-      span#fee {
+      .fee {
         border-top: 2px solid;
       }
       span#total-fee-head {
@@ -140,6 +140,10 @@ $secondColor: #3FF291;
         color: red;
       }
     }
+  }
+
+  #visa-service-item, #flight-service-item, #hotel-service-item, #pickup-service-item {
+    display: none;
   }
 
   span.important {

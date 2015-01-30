@@ -1,6 +1,13 @@
-<html>
-  <link rel="stylesheet" type="text/css" href="email">
-  <body class="email">
+<html class="email">
+  <!-- <link rel="stylesheet" type="text/css" href="email"> -->
+
+  <!-- this renders the css file, help with Email Preview. Either of the below methods work. found here http://blog.phusion.nl/2011/08/14/rendering-rails-3-1-assets-to-string/ -->
+  <style type="text/css">
+    <%= Lecong::Application.assets["email"].to_s.html_safe; %>
+    <%#= Rails.application.assets.find_asset('email.css.scss') %>
+  </style>
+
+  <body>
     <table cellpadding="0" cellspacing="0" width="100%">
 
     <%= render 'layouts/email_header' %>
