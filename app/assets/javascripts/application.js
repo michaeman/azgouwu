@@ -16,5 +16,6 @@
 //= require bootstrap-sprockets
 //= require jquery.validate.min
 //= require jquery-ui.min
+//= require jquery.func_toggle
 //= require_tree .
 //= require turbolinks
