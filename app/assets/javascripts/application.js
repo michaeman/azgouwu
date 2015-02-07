@@ -11,11 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require jquery.validate.min
 //= require jquery-ui.min
 //= require jquery.func_toggle
 //= require_tree .
-//= require turbolinks
