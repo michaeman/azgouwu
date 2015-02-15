@@ -1,39 +1,37 @@
+div#lecong_market
+	div.headline
+		div.container
+			h1 A tour in the world's largest furniture market
 
-/ = javascript_include_tag 'google-map.js'
-
-
-
-
-div.headline
 	div.container
-		h1 A tour in the world's largest furniture market
+		/ iframe.map width="600" height="450" frameborder="0" style="border:0" src='https://www.google.com/maps/embed/v1/place?q=Luofugong%20International%20Furniture%20Exposition%20&key=AIzaSyC4V3F1ThKlVZd6-LbAB3TzXz9_7cBX_vg&zoom=14'
 
-div.container
-	/ iframe.map width="600" height="450" frameborder="0" style="border:0" src='https://www.google.com/maps/embed/v1/place?q=Luofugong%20International%20Furniture%20Exposition%20&key=AIzaSyC4V3F1ThKlVZd6-LbAB3TzXz9_7cBX_vg&zoom=14'
+		p
+			| Shunde Lecong Furniture Market is the largest furniture market in China. It was named as the China Furniture Business and Trading Capital by the China National Light Industry Council and China National Furniture Association.
 
-	p
-		| Shunde Lecong Furniture Market is the largest furniture market in China. It was named as the China Furniture Business and Trading Capital by the China National Light Industry Council and China National Furniture Association.
+		p
+			|	The market started in the 1980s. In the phase of China’s fast development, people in Lecong grabbed the market opportunity starting to set up furniture shops alongside the 325 National Highway.Since then, the market has grown significantly over the years and eventually become the recognized Furniture City.
 
-	p
-		|	The market started in the 1980s. In the phase of China’s fast development, people in Lecong grabbed the market opportunity starting to set up furniture shops alongside the 325 National Highway.Since then, the market has grown significantly over the years and eventually become the recognized Furniture City.
+		p
+			|	It now extends more than 5km. It has attracted over 3,300 domestic and foreign furniture dealers, and more than 1,500 furniture manufacturers. It includes more than 200 modern furniture shopping malls. Among them, the major ones are Shunlian Furniture Store Northern District, Lecong Macalline Furniture Exhibition Centre, Shunde Empire Furniture, Luofugong International Furniture Exposition &#38; Exhibition Centre. These four shopping malls provide mostly retail services. Other shopping malls like Tuanyi, Dongheng, Nanhua, Dongming, Zhidongfang focus more on wholesale services.
 
-	p
-		|	It now extends more than 5km. It has attracted over 3,300 domestic and foreign furniture dealers, and more than 1,500 furniture manufacturers. It includes more than 200 modern furniture shopping malls. Among them, the major ones are Shunlian Furniture Store Northern District, Lecong Macalline Furniture Exhibition Centre, Shunde Empire Furniture, Luofugong International Furniture Exposition &#38; Exhibition Centre. These four shopping malls provide mostly retail services. Other shopping malls like Tuanyi, Dongheng, Nanhua, Dongming, Zhidongfang focus more on wholesale services.
+		p
+			|	There are displays of over 20,000 types of furniture and products ranging from living room furniture, dining room furniture, bedroom furniture, kitchen furniture, hotel furniture, hotel mattress, contract furniture, restaurant furniture, cafe chairs, bar stools, bathroom furniture, sanitary ware, furniture accessories, material and hardware, etc.
 
-	p
-		|	There are displays of over 20,000 types of furniture and products ranging from living room furniture, dining room furniture, bedroom furniture, kitchen furniture, hotel furniture, hotel mattress, contract furniture, restaurant furniture, cafe chairs, bar stools, bathroom furniture, sanitary ware, furniture accessories, material and hardware, etc.
+		div#lecong-google-map
 
-div#google-map style="width: 50%; height: 50%"
+/ script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4V3F1ThKlVZd6-LbAB3TzXz9_7cBX_vg" type="text/javascript"
 
-script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4V3F1ThKlVZd6-LbAB3TzXz9_7cBX_vg" type="text/javascript"
-
-javascript:
-	function initialize() {
-    var mapOptions = {
-      center: { lat: -34.397, lng: 150.644},
-      zoom: 8
-    };
-    var map = new google.maps.Map(document.getElementById('google-map'),
-        mapOptions);
-  }
-  google.maps.event.addDomListener(window, 'load', initialize);
+/ javascript:
+/ 	function initialize() {
+/     var mapOptions = {
+/       center: { lat: -34.397, lng: 150.644},
+/       zoom: 8
+/     };
+/     $('#lecong-google-map').css('height', 8 * $('.container').height() + 'px');
+/     $('#lecong-google-map').css('width', $('.container').width() + 'px');
+/     var map = new google.maps.Map(document.getElementById('lecong-google-map'),
+/         mapOptions);
+/     $('#google-map').after("<p>Test</p>");
+/   }
+/   google.maps.event.addDomListener(window, 'load', initialize);
