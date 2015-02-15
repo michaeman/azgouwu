@@ -1,5 +1,5 @@
 class ChinaToursController < ApplicationController
-  def reason
+  def lecong_market
   end
 
   def service

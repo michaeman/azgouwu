@@ -21,7 +21,7 @@ $(document).ready(function() {
   $(window).resize( function() {
     setImageHeight();
     // setButtonSize();
-  });  
+  });
 
   // show and hide info, china-tour -> how we can help
   $("p:has(a[class*='display-info'])").click (function(evt) {
@@ -35,7 +35,7 @@ $(document).ready(function() {
   });
 
 
-  // china_tour -> continue button 
+  // china_tour -> continue button
   $(".china_tours .booking-form").hide();
   $(".china_tours #continue-btn").click (function() {
     $(".china_tours .choose-service").hide("slide", {direction: "left"}, 400);
@@ -105,13 +105,13 @@ $(document).ready(function() {
   );
   $('form').validate();
   $('#customer_post_code').rules(
-    'add', 
+    'add',
     {
       rangelength: [4,4],
       digits: true
     });
   $('#customer_phone').rules(
-    'add', 
+    'add',
     {
       regex: /^\+?\d{5,15}$/
     });
