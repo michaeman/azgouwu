@@ -72,5 +72,8 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # LiveReload guard allows to automatically reload your browser when 'view' files are modified. Read more: https://github.com/guard/guard-livereload
+  gem 'guard-livereload', '~> 2.4', require: false
 end
 
