@@ -15,6 +15,18 @@ function setButtonSize() {
 }
 
 $(document).ready(function() {
+  // logo image chage
+  var imgFile = "<%= asset_path('lecong_logo_grey.png') %>";
+  var preloadImage = new Image();
+  preloadImage.src = "<%= asset_path('lecong_logo_white.png') %>";
+  $(".logo img").hover(
+    function() {
+      $(this).attr('src', preloadImage.src);
+    },
+    function () {
+      var currentSource=$(this).attr('src');
+      $(this).attr('src', imgFile);
+  });
 
   // the responsive images displayed at home page, store furniture (carosel)
   setImageHeight();

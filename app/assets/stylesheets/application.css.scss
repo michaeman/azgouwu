@@ -28,12 +28,26 @@ html, body {
   margin-bottom: 0px;
   background-color: $siteColor;
   border-radius: 0px !important;
-
   .dropdown-menu {
     background-color: $siteColor;
     li a {
       color: $inactiveLink;
     } 
+  }
+  .nav li {
+    font-size: 15px;
+  }
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  padding: 20px;
+  margin-top: 10px;
+  background-color: $siteColor;
+  border-radius: 5px;
+  a {
+    background-color: transparent;
   }
 }
 
@@ -51,6 +65,14 @@ html, body {
 @media (max-width: 768px) {
   .footer {
     padding-top: 1em;
+  }
+}
+
+// for larger than medium devices
+@media (min-width: 768px) {
+  #navbar {
+    position: relative;
+    margin-left: 140px;
   }
 }
 
