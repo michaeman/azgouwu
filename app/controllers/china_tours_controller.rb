@@ -7,7 +7,7 @@ class ChinaToursController < ApplicationController
     @booking = Booking.new
   end
 
-  def fee
+  def pricing
   end
 
   # POST /customers

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'china_tours/service', as: 'china_tours'
 
-  get 'china_tours/fee'
+  get 'china_tours/pricing'
 
   post 'china_tours/create'
 
