@@ -34,9 +34,6 @@ html, body {
       color: $inactiveLink;
     } 
   }
-  .nav li {
-    font-size: 14px;
-  }
 }
 
 .logo {
@@ -74,6 +71,9 @@ html, body {
   #navbar {
     position: relative;
     margin-left: 140px;
+  }
+  .navbar .nav li {
+    font-size: 14px;
   }
 }
 
