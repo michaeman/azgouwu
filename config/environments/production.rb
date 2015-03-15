@@ -5,8 +5,8 @@ Rails.application.configure do
   config.cache_classes = true
 
   # for aws-cdn, cache properties
-  config.static_cache_control = "public, max-age=1536000"
-  config.action_controller.asset_host = 'd36zhanskdad1p.cloudfront.net'
+  # config.static_cache_control = "public, max-age=1536000"
+  # config.action_controller.asset_host = 'd36zhanskdad1p.cloudfront.net'
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
