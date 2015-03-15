@@ -149,6 +149,19 @@ $secondColor: #3FF291;
   .body-content {
     margin-top: 2em;
     margin-bottom: 2em;
+    .section {
+      margin-bottom: 1.5em;
+      .subtitle {
+        font-weight: 400;
+        border-bottom-style: solid;
+        border-width: 1px;
+        border-color: grey;
+        padding-bottom: 6px;
+      }
+      h5 {
+        font-weight: 400;
+      }
+    }
   }
 
   #google-map {

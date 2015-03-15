@@ -59,6 +59,10 @@ html, body {
   }
 }
 
+a:hover {
+  background-color: transparent;
+}
+
 // for small devices
 @media (max-width: 768px) {
   .footer {
