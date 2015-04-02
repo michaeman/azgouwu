@@ -91,7 +91,7 @@ Rails.application.configure do
     domain: "auto-reply@lecongfurniture.com.au", 
     authentication: "plain",
     user_name: "auto-reply@lecongfurniture.com.au", 
-    password: ENV["email_passwd"], 
+    password: ENV["EMAIL_PASSWD"],
     ssl: true
   }
 end
