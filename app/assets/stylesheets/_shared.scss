@@ -1,5 +1,51 @@
 $siteColor : #12232B;
 $secondColor: #3FF291;
+$siteColorLight: #3F7792;
+$inactiveLink: #777;
+
+html, body {
+  height: 100%;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  background-color: $siteColor;
+  border-radius: 0px !important;
+  .dropdown-menu {
+    background-color: $siteColor;
+    li a {
+      color: $inactiveLink;
+    }
+  }
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  padding: 20px;
+  margin-top: 10px;
+  background-color: $siteColor;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+  a {
+    background-color: transparent;
+  }
+}
+
+.footer {
+  background-color: $siteColor;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  color: #777;
+  a {
+    color: #777;
+  }
+}
+
+a:hover {
+  background-color: transparent;
+}
+
 
 .headline {
   box-sizing: border-box;
@@ -86,7 +132,14 @@ form {
 
 
 // for tablet devices and larger
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
+  #navbar {
+    position: relative;
+    margin-left: 140px;
+  }
+  .navbar .nav li {
+    font-size: 14px;
+  }
   .headline {
     height: 500px;
     h1 {
@@ -102,6 +155,9 @@ form {
 
 // for small devices
 @media (max-width: 768px) {
+  .footer {
+    padding-top: 1em;
+  }
   .container {
     padding-left: 10% !important;
     padding-right: 10% !important;
