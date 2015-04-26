@@ -1,5 +1,5 @@
-$siteColor : #12232B;
-$secondColor: #3FF291;
+$siteColor : #000000;
+$secondColor: #00FF7F;
 $siteColorLight: #3F7792;
 $inactiveLink: #777;
 
@@ -64,9 +64,13 @@ a:hover {
   padding-bottom: 10%;
 }
 
+a.no-styling {
+  color: #0000FF;
+}
 a.no-styling:hover {
   background-color: transparent !important;
   cursor: pointer;
+  color: #0000FF;
 }
 
 

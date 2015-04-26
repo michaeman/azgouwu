@@ -1,13 +1,13 @@
 // Place all the styles related to the ChinaTours controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$siteColor : #12232B;
+$siteColor : #000000;
 $panelColor: #F0F0F0;
 $secondColor: #3FF291;
 
 .china_tours{
   .headline {
-    background-image: image-url('china-tour-headImage.jpg');
+    background-image: image-url('mainpic.jpg');
 
     p {
       padding-top: 1em;
@@ -31,6 +31,10 @@ $secondColor: #3FF291;
     padding: 10px;
   }
 
+  .img-size {
+    width: 100px;
+  }
+  
   .service-content {
     margin-left: 2em;
   }
@@ -46,6 +50,7 @@ $secondColor: #3FF291;
   }
 
   .moreinfo {
+    color: #FF7F50;
     display: none;
     padding-left: 2em;
   }

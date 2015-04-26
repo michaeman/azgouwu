@@ -1,17 +1,14 @@
 div.headline
   div.container
-    <h1>How we can help</h1>
-    <p>Our aim is to provide the best services possible solely for our clients. Rest assured that we do not profit from any referrer or affiliate programmes.</p>
-
-
+    <h1>正常价格买澳洲特产</h1>
+    <h1>100% 正常价格，在网上查查，比比价格.<h1>
 
 = form_tag('create', class: "form-horizontal") do
-
   div.container
     div.prog-tracker.row-eq-height
-      div.col-xs-4.prog-complete.prog-focus.step-1 Choose Services
-      div.col-xs-4.prog-todo.step-2 Personal Info
-      div.col-xs-4.prog-todo.step-3 Payment
+      div.col-xs-4.prog-complete.prog-focus.step-1 搜索产品
+      div.col-xs-4.prog-todo.step-2 运货方式
+      div.col-xs-4.prog-todo.step-3 付款
 
   / error message display
   - if @customer.errors.any?
@@ -27,20 +24,44 @@ div.headline
 
   div.choose-service
     div.container
-      div.service-info.col-sm-6
+      div.service-info.col-sm-7
         div.before-trip
-          <h2>Before your trip</h2>
+          <h2>最受欢迎</h2>
           div.service
             div.service-option
               = check_box :booking, :visa_service
             div.service-content
               p
-                | Arrange your visa <a class="display-info no-styling">More Info</a>
-              div.moreinfo
-                p
-                  | [optional]
-                  br
-                  | Service Charge: $50 (non-including Visa application fees)
+                | BLACKMORES Joint Formula Advanced
+                 <a class="display-info no-styling">More Info</a>
+                br
+                  | $ 37.99 每瓶 (120)
+                div.img-size
+                  img1 = image_tag('blackmore1.jpg', class: "img-rounded img-responsive")
+                  
+                div.moreinfo
+                 p
+                   br
+                   | General Information：
+                   br
+                   | Extra strength dual action formula to help relieve osteoarthritic joint pain 
+                   br
+                   | Helps reduce cartilage wear.
+                   br
+                   | Chondroitin provides nutrition to the joints. 
+                   br
+                   | Contains the most scientifically validated form of glucosamine, glucosamine sulfate sodium chloride complex.
+                   br
+                   | Contains the most commonly studied daily dose of chondroitin.
+                   br
+                   br
+                   | Ingredients:
+                   br
+                   | Chondroitin sulfate-bovine sodium 95% (Chondroitin sulfate sodium 400 mg) 421 mg Glucosamine.
+
+
+                   img1 = image_tag('blackmore1.jpg', class: "img-rounded img-responsive")
+
 
           div.service
             div.service-option
@@ -130,14 +151,14 @@ div.headline
 
       div#service-fee.col-sm-5.hidden-xs
         div#service-fee-header
-          h3 Service Fees:
+          h3 总费用:
         div#service-fee-content
           div.item
-            <p class="item-name">Standard Package:</p>
-            <p class="item-price">5% furniture expenditure + $500</p>
+            <p class="item-name">费用算法:</p>
+            <p class="item-price">15% 管理费 + 购买费用</p>
           div.item#visa-service-item
-            <p class="item-name">Visa Application Service:</p>
-            <p class="item-price">$50</p>
+            <p class="item-name">BLACKMORES Joint Forumla Advanced:</p>
+            <p class="item-price">$37.99</p>
           div.item#flight-service-item
             p.item-name Flight Booking Service
             p.item-price $20
@@ -149,34 +170,14 @@ div.headline
             p.item-price $100
           div#total-fee
             span#total-fee-head Total:&nbsp;&nbsp;
-            span.fee 5% furniture expenditure + $
-            span.fee#service-fee-number 500
+            span.fee 15% 管理费 + $
+            span.fee#service-fee-number 0
 
     div.book-service
       div.container
-        div.btn.btn-primary.btn-lg#continue-btn Book a Service
+        div.btn.btn-primary.btn-lg#continue-btn 下一步
 
 
   div.booking-form
     div.container
       = render 'customer_form'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
