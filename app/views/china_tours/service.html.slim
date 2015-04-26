@@ -6,7 +6,7 @@ div.headline
 = form_tag('create', class: "form-horizontal") do
   div.container
     div.prog-tracker.row-eq-height
-      div.col-xs-4.prog-complete.prog-focus.step-1 搜索产品
+      div.col-xs-4.prog-complete.prog-focus.step-1 选择产品
       div.col-xs-4.prog-todo.step-2 运货方式
       div.col-xs-4.prog-todo.step-3 付款
 
@@ -15,6 +15,8 @@ div.headline
       div.service-info.col-sm-7
         div.before-trip
           <h2>最受欢迎</h2>
+          br
+          br
           div.service
             div.service-option
               = check_box :booking, :visa_service
@@ -55,12 +57,36 @@ div.headline
             div.service-option
               = check_box :booking, :flight_service
             div.service-content
-              <p>Book your flight tickets to Guangzhou (2-way) <a class="display-info no-styling">More Info</a></p>
-              div.moreinfo
-                p
-                  | [optional]
-                  br
-                  | Service Charge: $20 (non-including flight costs)
+              p
+                | BLACKMORES Joint Formula Advanced
+                 <a class="display-info no-styling">More Info</a>
+                br
+                  | $ 37.99 每瓶 (120)
+                div.img-size
+                  img1 = image_tag('blackmore1.jpg', class: "img-rounded img-responsive")
+                  
+                div.moreinfo
+                 p
+                   br
+                   | General Information：
+                   br
+                   | Extra strength dual action formula to help relieve osteoarthritic joint pain 
+                   br
+                   | Helps reduce cartilage wear.
+                   br
+                   | Chondroitin provides nutrition to the joints. 
+                   br
+                   | Contains the most scientifically validated form of glucosamine, glucosamine sulfate sodium chloride complex.
+                   br
+                   | Contains the most commonly studied daily dose of chondroitin.
+                   br
+                   br
+                   | Ingredients:
+                   br
+                   | Chondroitin sulfate-bovine sodium 95% (Chondroitin sulfate sodium 400 mg) 421 mg Glucosamine.
+
+
+                   img1 = image_tag('blackmore1.jpg', class: "img-rounded img-responsive")
 
           div.service
             div.service-option
@@ -138,6 +164,10 @@ div.headline
 
 
       div#service-fee.col-sm-5.hidden-xs
+        br
+        br
+        br
+        br
         div#service-fee-header
           h3 总费用:
         div#service-fee-content
