@@ -10,18 +10,6 @@ div.headline
       div.col-xs-4.prog-todo.step-2 运货方式
       div.col-xs-4.prog-todo.step-3 付款
 
-  / error message display
-  - if @customer.errors.any?
-    div#error_explanation
-      h2
-        = pluralize(@customer.errors.count, "error")
-        |  prohibited this customer from being saved:
-
-      ul
-        - @customer.errors.full_messages.each do |message|
-          li = message
-
-
   div.choose-service
     div.container
       div.service-info.col-sm-7
